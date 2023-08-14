@@ -1,3 +1,4 @@
+using MagicVilla_API;
 using MagicVilla_API.Datos;
 using Microsoft.EntityFrameworkCore;
 
@@ -15,6 +16,8 @@ builder.Services.AddDbContext<ApplicationDbContext>(option =>
     option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 // Agregamos nuevo servicio que va a enlazar la clase DbContext con la cadena de conexion y con SqlServer
 });
+
+builder.Services.AddAutoMapper(typeof(MappinConfig));
 
 var app = builder.Build();
 
