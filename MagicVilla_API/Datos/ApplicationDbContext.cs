@@ -12,7 +12,8 @@ namespace MagicVilla_API.Datos
         }
         public DbSet<Villa> Villas { get; set; }
         // Utilizamos metodo DbSet<> para crear una tabla en la Db cogiendo el modelo Villa y llamandolo Villas en la Db
-
+        public DbSet<NumeroVilla> NumeroVillas { get; set; }
+        // Utilizamos metodo DbSet<> para crear una tabla en la Db cogiendo el modelo NumeroVilla y llamandolo NumeroVillas en la Db
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Villa>().HasData(
